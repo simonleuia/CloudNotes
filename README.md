@@ -1,50 +1,82 @@
-# Welcome to your Expo app
+# CloudNote
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project was developed as part of Assignment 2.
 
-## Get started
+CloudNote is a collaborative note-taking app built with React Native (Expo) and Supabase.
+The app allows multiple users to create, view, edit, and delete shared notes.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## GitHub Repository
 
-2. Start the app
+Project source code:
+https://github.com/simonleuia/CloudNotes
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* User authentication (sign up, login, logout)
+* Persistent login (session is remembered)
+* Create notes
+* View all notes from all users
+* Edit notes
+* Delete notes with confirmation
+* Input validation (no empty fields)
+* Success and error messages
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Requirements checklist
 
-When you're ready, run:
+### Authentication
 
-```bash
-npm run reset-project
-```
+* [x] Sign-up (email + password)
+* [x] Email template customized in Supabase
+* [x] Login / Logout implemented
+* [x] Session persistence (user stays logged in)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### Database
 
-To learn more about developing your project with Expo, look at the following resources:
+* [x] Only authenticated users can access the database (RLS)
+* [x] Create note (title, content, creator, updated time)
+* [x] Read all notes (shared across users)
+* [x] Update existing notes
+* [x] Delete notes with confirmation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+### Validation
 
-Join our community of developers creating universal apps.
+* [x] No empty fields (notes, email, password)
+* [x] User receives feedback (success/error messages)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## Video
+
+A demonstration video (3–5 minutes) is included showing:
+
+* User sign up and login
+* Creating a note
+* Editing a note
+* Deleting a note
+* Data updating in Supabase database
+* Session persistence (user stays logged in after restart)
+
+---
+
+## Technologies used
+
+* React Native (Expo)
+* Supabase (Authentication + Database)
+
+---
+
+## Notes
+
+* The app was tested using an Android emulator
+* All data is stored in Supabase
+* Multiple users can collaborate on shared notes
